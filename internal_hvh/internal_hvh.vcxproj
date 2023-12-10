@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Prerelease|Win32">
+      <Configuration>Prerelease</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Prerelease|x64">
+      <Configuration>Prerelease</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseSymbols|Win32">
+      <Configuration>ReleaseSymbols</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseSymbols|x64">
+      <Configuration>ReleaseSymbols</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{D1F5161A-D2FA-4BAB-9D72-F167448AA9C1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>internalhvh</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseIntelIPP>false</UseIntelIPP>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseIntelIPP>Parallel_Dynamic</UseIntelIPP>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSymbols|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseIntelIPP>Parallel_Dynamic</UseIntelIPP>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Prerelease|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseIntelIPP>Parallel_Dynamic</UseIntelIPP>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Intel C++ Compiler 18.0</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Intel C++ Compiler 18.0</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSymbols|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Intel C++ Compiler 18.0</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Prerelease|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Intel C++ Compiler 18.0</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSymbols|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Prerelease|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSymbols|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Prerelease|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)\lua_new\compile\src;$(CV_DIR)\Include\C;$(ProjectDir)\lua_new;$(DXSDK_DIR)\Include;$(ProjectDir)\misc\renderer\include;$(ProjectDir)\misc\networking\include;$(LIBRESSL_DIR)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LIBRESSL_DIR)\Lib\Debug;$(ProjectDir)\lua_new\compile\src;$(ProjectDir)\misc;$(CV_DIR)\Lib\COFF;$(DXSDK_DIR)\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)\lua_new\compile\src;$(CV_DIR)\Include\C;$(ProjectDir)\lua_new;$(DXSDK_DIR)\Include;$(ProjectDir)\misc\renderer\include;$(ProjectDir)\misc\networking\include;$(LIBRESSL_DIR)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LIBRESSL_DIR)\Lib\Release;$(ProjectDir)\lua_new\compile\src;$(ProjectDir)\misc;$(CV_DIR)\Lib\COFF;$(DXSDK_DIR)\Lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetName>fatality</TargetName>
+    <GenerateManifest>false</GenerateManifest>
+    <EmbedManifest>false</EmbedManifest>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSymbols|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)\lua_new\compile\src;$(CV_DIR)\Include\C;$(ProjectDir)\lua_new;$(DXSDK_DIR)\Include;$(ProjectDir)\misc\renderer\include;$(ProjectDir)\misc\networking\include;$(LIBRESSL_DIR)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LIBRESSL_DIR)\Lib\Release;$(ProjectDir)\lua_new\compile\src;$(ProjectDir)\misc;$(CV_DIR)\Lib\COFF;$(DXSDK_DIR)\Lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetName>fatality</TargetName>
+    <GenerateManifest>false</GenerateManifest>
+    <EmbedManifest>false</EmbedManifest>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Prerelease|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)\lua_new\compile\src;$(CV_DIR)\Include\C;$(ProjectDir)\lua_new;$(DXSDK_DIR)\Include;$(ProjectDir)\misc\renderer\include;$(ProjectDir)\misc\networking\include;$(LIBRESSL_DIR)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LIBRESSL_DIR)\Lib\Release;$(ProjectDir)\lua_new\compile\src;$(ProjectDir)\misc;$(CV_DIR)\Lib\COFF;$(DXSDK_DIR)\Lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetName>fatality</TargetName>
+    <GenerateManifest>false</GenerateManifest>
+    <EmbedManifest>false</EmbedManifest>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSymbols|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Prerelease|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Wininet.lib;luajit.lib;lua51.lib;Ws2_32.lib;libMinHook-x86-v141-mtd.lib;Bcrypt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>true</OptimizeReferences>
+      <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <StackReserveSize>16777216</StackReserveSize>
+    </Link>
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;EVO_USE_DX9;_EXTRAINFO;NO_VIRT;DEBUG_LOG;NO_NETOFFSETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <AdditionalOptions>/Zo %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+    </ClCompile>
+    <Link>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <Xdcmake>
+      <DocumentLibraryDependencies>false</DocumentLibraryDependencies>
+    </Xdcmake>
+    <ClCompile>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <PreprocessorDefinitions>_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_HAS_STATIC_RTTI=0;_WIN32;NDEBUG;RELEASE;EVO_USE_DX9;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>-Wno-logical-op-parentheses -Wno-microsoft-cast -Wno-narrowing -Wno-return-type -Wno-bitwise-op-parentheses -Wno-unused-function -Wno-microsoft-enum-forward-reference -Wno-overloaded-virtual -Wno-reorder -Wno-misleading-indentation -Wno-unused-private-field /Zc:threadSafeInit /Oy- -Xclang -fno-rtti -Xclang -fno-rtti-data -flto %(AdditionalOptions)</AdditionalOptions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <SDLCheck>false</SDLCheck>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Wininet.lib;luajit.lib;lua51.lib;ntdll.lib;Ws2_32.lib;libMinHook-x86-v141-mtd.lib;crypt32.lib;crypto-46.lib;ssl-48.lib;tls-20.lib;Bcrypt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile>
+      </ProgramDatabaseFile>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <LinkTimeCodeGeneration />
+      <OptimizeReferences>true</OptimizeReferences>
+      <StackReserveSize>16777216</StackReserveSize>
+      <AdditionalOptions>/MAP %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSymbols|Win32'">
+    <ClCompile />
+    <Link />
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <Xdcmake>
+      <DocumentLibraryDependencies>false</DocumentLibraryDependencies>
+    </Xdcmake>
+    <ClCompile>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <PreprocessorDefinitions>_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_HAS_STATIC_RTTI=0;_WIN32;NDEBUG;RELEASE;EVO_USE_DX9;ALPHA;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalOptions>-Wno-logical-op-parentheses -Wno-microsoft-cast -Wno-narrowing -Wno-return-type -Wno-bitwise-op-parentheses -Wno-unused-function -Wno-microsoft-enum-forward-reference -Wno-overloaded-virtual -Wno-reorder -Wno-misleading-indentation -Wno-unused-private-field /Zc:threadSafeInit /Oy- -Xclang -fno-rtti -Xclang -fno-rtti-data -flto %(AdditionalOptions)</AdditionalOptions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <SDLCheck>false</SDLCheck>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Wininet.lib;luajit.lib;lua51.lib;ntdll.lib;Ws2_32.lib;libMinHook-x86-v141-mtd.lib;crypt32.lib;crypto-46.lib;ssl-48.lib;tls-20.lib;Bcrypt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>fatality.pdb</ProgramDatabaseFile>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+      <OptimizeReferences>true</OptimizeReferences>
+      <StackReserveSize>16777216</StackReserveSize>
+      <AdditionalOptions>/MAP %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Prerelease|Win32'">
+    <ClCompile>
+    </ClCompile>
+    <Link>
+    </Link>
+    <PostBuildEvent>
+    </PostBuildEvent>
+    <Xdcmake>
+      <DocumentLibraryDependencies>false</DocumentLibraryDependencies>
+    </Xdcmake>
+    <ClCompile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_HAS_STATIC_RTTI=0;_WIN32;NDEBUG;EVO_USE_DX9;NO_VIRT;DEBUG_LOG;NO_NETOFFSETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalOptions>-Wno-logical-op-parentheses -Wno-microsoft-cast -Wno-narrowing -Wno-return-type -Wno-bitwise-op-parentheses -Wno-unused-function -Wno-microsoft-enum-forward-reference -Wno-overloaded-virtual -Wno-reorder -Wno-misleading-indentation -Wno-unused-private-field /Zc:threadSafeInit /Oy- -Xclang -fno-rtti -Xclang -fno-rtti-data %(AdditionalOptions)</AdditionalOptions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <SDLCheck>false</SDLCheck>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Wininet.lib;luajit.lib;lua51.lib;ntdll.lib;Ws2_32.lib;libMinHook-x86-v141-mtd.lib;Bcrypt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <LinkTimeCodeGeneration />
+      <OptimizeReferences>true</OptimizeReferences>
+      <StackCommitSize>
+      </StackCommitSize>
+      <StackReserveSize>
+      </StackReserveSize>
+      <AdditionalOptions>/MAP %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+    </ClCompile>
+    <Link>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSymbols|x64'">
+    <ClCompile />
+    <Link />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Prerelease|x64'">
+    <ClCompile>
+    </ClCompile>
+    <Link>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="DLLMain.cpp" />
+    <ClCompile Include="features\aimbot.cpp" />
+    <ClCompile Include="features\aimbot_helpers.cpp" />
+    <ClCompile Include="features\animations.cpp" />
+    <ClCompile Include="features\antiaim.cpp" />
+    <ClCompile Include="features\autostrafer.cpp" />
+    <ClCompile Include="features\beams.cpp" />
+    <ClCompile Include="features\bone_setup.cpp" />
+    <ClCompile Include="features\chams.cpp" />
+    <ClCompile Include="features\console_log.cpp" />
+    <ClCompile Include="features\entity_rendering.cpp" />
+    <ClCompile Include="features\flashlight.cpp" />
+    <ClCompile Include="features\freestanding.cpp" />
+    <ClCompile Include="features\glow.cpp" />
+    <ClCompile Include="features\grenade_pred.cpp" />
+    <ClCompile Include="features\hitmarker.cpp" />
+    <ClCompile Include="features\hitscan.cpp" />
+    <ClCompile Include="features\inventorychanger.cpp" />
+    <ClCompile Include="features\knifebot.cpp" />
+    <ClCompile Include="features\lag_compensation.cpp" />
+    <ClCompile Include="features\legit.cpp" />
+    <ClCompile Include="features\misc.cpp" />
+    <ClCompile Include="features\mt.cpp" />
+    <ClCompile Include="features\playerperf.cpp" />
+    <ClCompile Include="features\player_log.cpp" />
+    <ClCompile Include="features\prediction.cpp" />
+    <ClCompile Include="features\resolver.cpp" />
+    <ClCompile Include="features\shared_data.cpp" />
+    <ClCompile Include="features\skinchanger.cpp" />
+    <ClCompile Include="features\sound_esp.cpp" />
+    <ClCompile Include="features\thirdperson.cpp" />
+    <ClCompile Include="features\tickbase.cpp" />
+    <ClCompile Include="features\visuals.cpp" />
+    <ClCompile Include="features\wall_penetration.cpp" />
+    <ClCompile Include="hooks\create_move.cpp" />
+    <ClCompile Include="hooks\do_post_screen_space_effects.cpp" />
+    <ClCompile Include="hooks\draw_model_execute.cpp" />
+    <ClCompile Include="hooks\emit_sound.cpp" />
+    <ClCompile Include="hooks\estimate_abs_velocity.cpp" />
+    <ClCompile Include="hooks\find_material.cpp" />
+    <ClCompile Include="hooks\frame_stage_notify.cpp" />
+    <ClCompile Include="hooks\is_box_visible.cpp" />
+    <ClCompile Include="hooks\is_connected.cpp" />
+    <ClCompile Include="hooks\lua.cpp" />
+    <ClCompile Include="hooks\misc.cpp" />
+    <ClCompile Include="hooks\net_props.cpp" />
+    <ClCompile Include="hooks\level_init_post_entity.cpp" />
+    <ClCompile Include="hooks\override_view.cpp" />
+    <ClCompile Include="hooks\paint_traverse.cpp" />
+    <ClCompile Include="hooks\physics_simulate.cpp" />
+    <ClCompile Include="hooks\player.cpp" />
+    <ClCompile Include="hooks\present.cpp" />
+    <ClCompile Include="hooks\process_input.cpp" />
+    <ClCompile Include="hooks\render_view.cpp" />
+    <ClCompile Include="hooks\reset.cpp" />
+    <ClCompile Include="hooks\run_command.cpp" />
+    <ClCompile Include="hooks\scene_end.cpp" />
+    <ClCompile Include="hooks\packet_start.cpp" />
+    <ClCompile Include="hooks\sequence.cpp" />
+    <ClCompile Include="hooks\setup_bones_calls.cpp" />
+    <ClCompile Include="hooks\level_shutdown.cpp" />
+    <ClCompile Include="hooks\con_vars.cpp" />
+    <ClCompile Include="hooks\wnd_proc.cpp" />
+    <ClCompile Include="lua_new\lua\api\cfg.cpp" />
+    <ClCompile Include="lua_new\lua\api\cvar.cpp" />
+    <ClCompile Include="lua_new\lua\api\database.cpp" />
+    <ClCompile Include="lua_new\lua\api\engine.cpp" />
+    <ClCompile Include="lua_new\lua\api\entity.cpp" />
+    <ClCompile Include="lua_new\lua\api\event.cpp" />
+    <ClCompile Include="lua_new\lua\api\fs.cpp" />
+    <ClCompile Include="lua_new\lua\api\globals.cpp" />
+    <ClCompile Include="lua_new\lua\api\gui.cpp" />
+    <ClCompile Include="lua_new\lua\api\input.cpp" />
+    <ClCompile Include="lua_new\lua\api\mat.cpp" />
+    <ClCompile Include="lua_new\lua\api\math.cpp" />
+    <ClCompile Include="lua_new\lua\api\panorama.cpp" />
+    <ClCompile Include="lua_new\lua\api\render.cpp" />
+    <ClCompile Include="lua_new\lua\api\timer.cpp" />
+    <ClCompile Include="lua_new\lua\api\user_cmd.cpp" />
+    <ClCompile Include="lua_new\lua\api\utils.cpp" />
+    <ClCompile Include="lua_new\lua\api\zip.cpp" />
+    <ClCompile Include="lua_new\lua\engine.cpp" />
+    <ClCompile Include="lua_new\lua\helpers.cpp" />
+    <ClCompile Include="lua_new\lua\runtime_state.cpp" />
+    <ClCompile Include="lua_new\lua\script.cpp" />
+    <ClCompile Include="lua_new\lua\state.cpp" />
+    <ClCompile Include="md5.cpp" />
+    <ClCompile Include="menu\effects.cpp" />
+    <ClCompile Include="menu\elements\alpha_slider.cpp" />
+    <ClCompile Include="menu\elements\button.cpp" />
+    <ClCompile Include="menu\elements\checkbox.cpp" />
+    <ClCompile Include="menu\elements\child.cpp" />
+    <ClCompile Include="menu\elements\combobox.cpp" />
+    <ClCompile Include="menu\elements\control.cpp" />
+    <ClCompile Include="menu\elements\glitch_text.cpp" />
+    <ClCompile Include="menu\elements\hue_slider.cpp" />
+    <ClCompile Include="menu\elements\listbox.cpp" />
+    <ClCompile Include="menu\elements\slider.cpp" />
+    <ClCompile Include="menu\elements\sub_controls\color_picker.cpp" />
+    <ClCompile Include="menu\elements\sub_controls\key_bind.cpp" />
+    <ClCompile Include="menu\elements\sub_tab.cpp" />
+    <ClCompile Include="menu\elements\tab.cpp" />
+    <ClCompile Include="menu\elements\text_box.cpp" />
+    <ClCompile Include="menu\elements\weapon_tab.cpp" />
+    <ClCompile Include="menu\elements\window.cpp" />
+    <ClCompile Include="menu\menu.cpp" />
+    <ClCompile Include="misc\aes256.cpp" />
+    <ClCompile Include="misc\config.cpp" />
+    <ClCompile Include="misc\d3dfont.cpp" />
+    <ClCompile Include="misc\dx_adapter.cpp" />
+    <ClCompile Include="misc\globals.cpp" />
+    <ClCompile Include="misc\hooks.cpp" />
+    <ClCompile Include="misc\init.cpp" />
+    <ClCompile Include="misc\input.cpp" />
+    <ClCompile Include="misc\listeners.cpp" />
+    <ClCompile Include="misc\math.cpp" />
+    <ClCompile Include="misc\monocypher.c" />
+    <ClCompile Include="misc\networking\connector.cpp" />
+    <ClCompile Include="misc\networking\net_offsets.cpp" />
+    <ClCompile Include="misc\networking\src\crypto\helpers.cpp" />
+    <ClCompile Include="misc\renderer\src\adapter_dx11.cpp" />
+    <ClCompile Include="misc\renderer\src\adapter_dx9.cpp" />
+    <ClCompile Include="misc\renderer\src\adapter_gl2.cpp" />
+    <ClCompile Include="misc\renderer\src\adapter_gl3.cpp" />
+    <ClCompile Include="misc\renderer\src\bitfont.cpp" />
+    <ClCompile Include="misc\renderer\src\command.cpp" />
+    <ClCompile Include="misc\renderer\src\font.cpp" />
+    <ClCompile Include="misc\renderer\src\layer.cpp" />
+    <ClCompile Include="misc\renderer\src\renderer.cpp" />
+    <ClCompile Include="misc\renderer\src\texture.cpp" />
+    <ClCompile Include="misc\StackTracer.cpp" />
+    <ClCompile Include="misc\util.cpp" />
+    <ClCompile Include="sdk\checksum_md5.cpp" />
+    <ClCompile Include="sdk\datatypes\Vector.cpp" />
+    <ClCompile Include="sdk\entity_classes.cpp" />
+    <ClCompile Include="sdk\interfaces\CGlowObjectManager.cpp" />
+    <ClCompile Include="sdk\KeyValues.cpp" />
+    <ClCompile Include="sdk\trace_ray.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cthash.h" />
+    <ClInclude Include="features\aimbot.h" />
+    <ClInclude Include="features\aimbot_helpers.h" />
+    <ClInclude Include="features\animations.h" />
+    <ClInclude Include="features\antiaim.h" />
+    <ClInclude Include="features\autostrafer.h" />
+    <ClInclude Include="features\beams.h" />
+    <ClInclude Include="features\bone_setup.h" />
+    <ClInclude Include="features\chams.h" />
+    <ClInclude Include="features\console_log.h" />
+    <ClInclude Include="features\entity_rendering.h" />
+    <ClInclude Include="features\flashlight.h" />
+    <ClInclude Include="features\freestanding.h" />
+    <ClInclude Include="features\gamemovement.h" />
+    <ClInclude Include="features\glow.h" />
+    <ClInclude Include="features\grenade_pred.h" />
+    <ClInclude Include="features\hitmarker.h" />
+    <ClInclude Include="features\hitscan.h" />
+    <ClInclude Include="features\inventorychanger.h" />
+    <ClInclude Include="features\knifebot.h" />
+    <ClInclude Include="features\lag_compensation.h" />
+    <ClInclude Include="features\legit.h" />
+    <ClInclude Include="features\misc.h" />
+    <ClInclude Include="features\mt.h" />
+    <ClInclude Include="features\playerperf.h" />
+    <ClInclude Include="features\player_log.h" />
+    <ClInclude Include="features\prediction.h" />
+    <ClInclude Include="features\include_features.h" />
+    <ClInclude Include="features\resolver.h" />
+    <ClInclude Include="features\shared_data.h" />
+    <ClInclude Include="features\skinchanger.h" />
+    <ClInclude Include="features\sound_esp.h" />
+    <ClInclude Include="features\structs.h" />
+    <ClInclude Include="features\thirdperson.h" />
+    <ClInclude Include="features\tickbase.h" />
+    <ClInclude Include="features\visuals.h" />
+    <ClInclude Include="features\wall_penetration.h" />
+    <ClInclude Include="hooks\hooks.h" />
+    <ClInclude Include="includes.h" />
+    <ClInclude Include="include_cheat.h" />
+    <ClInclude Include="josefin_sans.h" />
+    <ClInclude Include="jost.h" />
+    <ClInclude Include="lua_new\lua\api_def.h" />
+    <ClInclude Include="lua_new\lua\engine.h" />
+    <ClInclude Include="lua_new\lua\helpers.h" />
+    <ClInclude Include="lua_new\lua\state.h" />
+    <ClInclude Include="md5.h" />
+    <ClInclude Include="menu\effects.h" />
+    <ClInclude Include="menu\elements\alpha_slider.h" />
+    <ClInclude Include="menu\elements\button.h" />
+    <ClInclude Include="menu\elements\checkbox.h" />
+    <ClInclude Include="menu\elements\child.h" />
+    <ClInclude Include="menu\elements\combobox.h" />
+    <ClInclude Include="menu\elements\control.h" />
+    <ClInclude Include="menu\elements\glitch_text.h" />
+    <ClInclude Include="menu\elements\hue_slider.h" />
+    <ClInclude Include="menu\elements\listbox.h" />
+    <ClInclude Include="menu\elements\pad.h" />
+    <ClInclude Include="menu\elements\slider.h" />
+    <ClInclude Include="menu\elements\sub_controls\color_picker.h" />
+    <ClInclude Include="menu\elements\sub_controls\key_bind.h" />
+    <ClInclude Include="menu\elements\sub_controls\sub_control.h" />
+    <ClInclude Include="menu\elements\sub_tab.h" />
+    <ClInclude Include="menu\elements\tab.h" />
+    <ClInclude Include="menu\elements\text_box.h" />
+    <ClInclude Include="menu\elements\weapon_tab.h" />
+    <ClInclude Include="menu\elements\window.h" />
+    <ClInclude Include="menu\menu.h" />
+    <ClInclude Include="menu\menu_include.h" />
+    <ClInclude Include="misc\aes256.h" />
+    <ClInclude Include="misc\config.h" />
+    <ClInclude Include="misc\crc.h" />
+    <ClInclude Include="misc\d3dfont.h" />
+    <ClInclude Include="misc\datamap.h" />
+    <ClInclude Include="misc\defs.h" />
+    <ClInclude Include="misc\dx_adapter.h" />
+    <ClInclude Include="misc\globals.h" />
+    <ClInclude Include="misc\hitsounds.h" />
+    <ClInclude Include="misc\init.h" />
+    <ClInclude Include="misc\input.h" />
+    <ClInclude Include="misc\intersection.h" />
+    <ClInclude Include="misc\intrinsics.h" />
+    <ClInclude Include="misc\ipc.h" />
+    <ClInclude Include="misc\json.hpp" />
+    <ClInclude Include="misc\listeners.h" />
+    <ClInclude Include="misc\math.h" />
+    <ClInclude Include="misc\memory.h" />
+    <ClInclude Include="misc\MinHook.h" />
+    <ClInclude Include="misc\monocypher.h" />
+    <ClInclude Include="misc\netvars.h" />
+    <ClInclude Include="misc\networking\connector.h" />
+    <ClInclude Include="misc\networking\include\data.h" />
+    <ClInclude Include="misc\networking\net_offsets.h" />
+    <ClInclude Include="misc\networking\src\crypto\helpers.h" />
+    <ClInclude Include="misc\offsets.h" />
+    <ClInclude Include="misc\profiler.h" />
+    <ClInclude Include="misc\protection.h" />
+    <ClInclude Include="misc\render.h" />
+    <ClInclude Include="misc\renderer\include\deps\stb\stb_image.h" />
+    <ClInclude Include="misc\renderer\include\deps\stb\stb_rect_pack.h" />
+    <ClInclude Include="misc\renderer\include\deps\stb\stb_truetype.h" />
+    <ClInclude Include="misc\renderer\include\ren\adapter.h" />
+    <ClInclude Include="misc\renderer\include\ren\adapter_dx11.h" />
+    <ClInclude Include="misc\renderer\include\ren\adapter_dx9.h" />
+    <ClInclude Include="misc\renderer\include\ren\adapter_gl2.h" />
+    <ClInclude Include="misc\renderer\include\ren\adapter_gl3.h" />
+    <ClInclude Include="misc\renderer\include\ren\anim.h" />
+    <ClInclude Include="misc\renderer\include\ren\bitfont.h" />
+    <ClInclude Include="misc\renderer\include\ren\command.h" />
+    <ClInclude Include="misc\renderer\include\ren\font.h" />
+    <ClInclude Include="misc\renderer\include\ren\layer.h" />
+    <ClInclude Include="misc\renderer\include\ren\misc.h" />
+    <ClInclude Include="misc\renderer\include\ren\renderer.h" />
+    <ClInclude Include="misc\renderer\include\ren\texture.h" />
+    <ClInclude Include="misc\renderer\include\ren\types.h" />
+    <ClInclude Include="misc\renderer\include\ren\vertex.h" />
+    <ClInclude Include="misc\StackTracer.h" />
+    <ClInclude Include="misc\tsl\robin_growth_policy.h" />
+    <ClInclude Include="misc\tsl\robin_hash.h" />
+    <ClInclude Include="misc\tsl\robin_map.h" />
+    <ClInclude Include="misc\tsl\robin_set.h" />
+    <ClInclude Include="misc\util.h" />
+    <ClInclude Include="misc\hybrid_hook.h" />
+    <ClInclude Include="misc\vm.hpp" />
+    <ClInclude Include="misc\WinReg.hpp" />
+    <ClInclude Include="sdk\CBoneChache.h" />
+    <ClInclude Include="sdk\CCSGameRulesProxy.h" />
+    <ClInclude Include="sdk\CCSGOPlayerAnimState.h" />
+    <ClInclude Include="sdk\checksum_md5.h" />
+    <ClInclude Include="sdk\ClientClass.h" />
+    <ClInclude Include="sdk\CMergedMDL.h" />
+    <ClInclude Include="sdk\CNetChannel.h" />
+    <ClInclude Include="sdk\ConVar.h" />
+    <ClInclude Include="sdk\datatypes\Color.h" />
+    <ClInclude Include="sdk\datatypes\CUtlVector.h" />
+    <ClInclude Include="sdk\datatypes\include_datatypes.h" />
+    <ClInclude Include="sdk\datatypes\matrix3x3_t.h" />
+    <ClInclude Include="sdk\datatypes\matrix3x4_t.h" />
+    <ClInclude Include="sdk\datatypes\QAngle.h" />
+    <ClInclude Include="sdk\datatypes\Vector.h" />
+    <ClInclude Include="sdk\datatypes\Vector2D.h" />
+    <ClInclude Include="sdk\datatypes\Vector4D.h" />
+    <ClInclude Include="sdk\datatypes\VMatrix.h" />
+    <ClInclude Include="sdk\defines.h" />
+    <ClInclude Include="sdk\econ_item.h" />
+    <ClInclude Include="sdk\entity_classes.h" />
+    <ClInclude Include="sdk\IClientEntity.h" />
+    <ClInclude Include="sdk\IMaterial.h" />
+    <ClInclude Include="sdk\IMaterialVar.h" />
+    <ClInclude Include="sdk\include_sdk.h" />
+    <ClInclude Include="sdk\INetChannelInfo.h" />
+    <ClInclude Include="sdk\interfaces\CGlowObjectManager.h" />
+    <ClInclude Include="sdk\interfaces\CHud.h" />
+    <ClInclude Include="sdk\interfaces\IBaseClientDll.h" />
+    <ClInclude Include="sdk\interfaces\IBaseFileSystem.h" />
+    <ClInclude Include="sdk\interfaces\IClientEntityList.h" />
+    <ClInclude Include="sdk\interfaces\IClientModeShared.h" />
+    <ClInclude Include="sdk\interfaces\IClientState.h" />
+    <ClInclude Include="sdk\interfaces\ICVar.h" />
+    <ClInclude Include="sdk\interfaces\IEngineClient.h" />
+    <ClInclude Include="sdk\interfaces\IEngineTrace.h" />
+    <ClInclude Include="sdk\interfaces\IGameEventManager.h" />
+    <ClInclude Include="sdk\interfaces\CSPlayerResource.h" />
+    <ClInclude Include="sdk\interfaces\IGlobalVarsBase.h" />
+    <ClInclude Include="sdk\interfaces\IInput.h" />
+    <ClInclude Include="sdk\interfaces\ILocalize.h" />
+    <ClInclude Include="sdk\interfaces\IMaterialSystem.h" />
+    <ClInclude Include="sdk\interfaces\IMatRenderContext.h" />
+    <ClInclude Include="sdk\interfaces\IMemAlloc.h" />
+    <ClInclude Include="sdk\interfaces\IMoveHelper.h" />
+    <ClInclude Include="sdk\interfaces\interfaces.h" />
+    <ClInclude Include="sdk\interfaces\IPhysicsSurfaceProps.h" />
+    <ClInclude Include="sdk\interfaces\IPrediction.h" />
+    <ClInclude Include="sdk\interfaces\IStudioRender.h" />
+    <ClInclude Include="sdk\interfaces\ISurface.h" />
+    <ClInclude Include="sdk\interfaces\IToolEntity.h" />
+    <ClInclude Include="sdk\interfaces\IVDebugOverlay.h" />
+    <ClInclude Include="sdk\interfaces\IVEffects.h" />
+    <ClInclude Include="sdk\interfaces\IViewRender.h" />
+    <ClInclude Include="sdk\interfaces\IViewRenderBeams.h" />
+    <ClInclude Include="sdk\interfaces\IVModelInfo.h" />
+    <ClInclude Include="sdk\interfaces\IVModelRender.h" />
+    <ClInclude Include="sdk\interfaces\IVPanel.h" />
+    <ClInclude Include="sdk\interfaces\IVRenderView.h" />
+    <ClInclude Include="sdk\interfaces\IWeaponSystem.h" />
+    <ClInclude Include="sdk\IRefCounted.h" />
+    <ClInclude Include="sdk\KeyValues.h" />
+    <ClInclude Include="sdk\misc.h" />
+    <ClInclude Include="sdk\networkstringtable.h" />
+    <ClInclude Include="sdk\panorama.h" />
+    <ClInclude Include="sdk\structs.h" />
+    <ClInclude Include="sdk\trace_ray.h" />
+    <ClInclude Include="smallest_pixel.h" />
+    <ClInclude Include="space_texture.h" />
+    <ClInclude Include="threadsafe_deque.h" />
+    <ClInclude Include="weaponicons.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
